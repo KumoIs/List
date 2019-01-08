@@ -9,13 +9,106 @@
 <body>
 <header></header>
 <main>
-    <div>
-   <span><a href='javascript:window.history.back(-1);'>返回</a></span>
-   <span><a href='javascript:location.href= "/index.html";'>主页</a>/<a href='javascript:location.reload();'>注册</a></span>
+    <div class="main_header_title">
+        <span><a href='javascript:window.history.back(-1);'>  &lt;返回</a></span>
+        <span><a href='javascript:location.href= "/index.html";' style="color:#ccc;">主页</a>/<a href='javascript:location.reload();'>注册</a></span>
     </div>
     </ul>
-    <form>
+    
+    <form id="main_form">
+        
+    <p class="form_title">注册</p>
+    <div class="form_sex">
+        <p>称谓<i>*</i></p>
+        <label for="male"></i><input type="radio" name='sex' id='male'> <span>先生</span></label>
+        <label for="female"><input type="radio" name="sex" id='female'> <span>小姐</span></label>
+    </div>
 
+        
+
+        <div class="form_table">
+        <div class="row">
+                <div class="row_left">
+                    <p>姓氏<i>*</i></p>
+                    <input type="text" name='surnname' id='surnname'>
+                </div>
+                <div class="row_right">
+                    <p>名字<i></i></p>
+                    <input type="text" name="name" id='name'>
+                </div>
+            </div>
+            <p>国家/地区</p>
+            <h3>中国</h3>
+            <div class="row">
+                <div class="row_left">
+                    <p>配送地址地区<i></i></p>
+                    <input type="text" name='area' id='area'>
+                </div>
+                <div class="row_right">
+                    <p>配送地址城市<i></i></p>
+                    <input type="text" name="city" id='city'>
+                </div>
+            </div>
+            <div class="row">
+                <div class="row_left">
+                    <p>配送地址行政区<i></i></p>
+                    <input type="text" name="division" id='division'>
+                </div>
+                <div class="row_right">
+                    <p>压缩<i></i></p>
+                    <input type="text" name="divisioncode" id='divisioncode'>
+                </div>
+            </div>
+            <div class="row">
+                <div class="row_left">
+                    <p>街道名称∕号码<i></i></p>
+                    <input type="text" name="block" id='block'>
+                </div>
+            </div>
+            <div class="row">
+                <div class="row_left">
+                    <p>地址行2  （可选）<i></i></p>
+                    <input type="text" name="block_col2" id='block_col2'>
+                </div>
+            </div>
+            <div class="row">
+                <div class="row_left">
+                    <p>电子邮件<i>*</i></p>
+                    <input type="text" name="email" id='email'>
+                </div>
+                <div class="row_right">
+                    <p>确认电邮地址<i>*</i></p>
+                    <input type="text" name="conemail" id='conemail'>
+                </div>
+            </div>
+            <div class="row">
+                <div class="row_left">
+                    <p>手机<i></i></p>
+                    <input type="text" name="phonenumber" id='phonenumber'>
+                </div>
+                <div class="row_right">
+                    <p>出生日期<i></i></p>
+                    <input type="text" name="year" id='year'>
+                    <input type="text" name="month" id='month'>
+                    <input type="text" name="day" id='day'>
+                </div>
+            </div>
+            <div class="row">
+                <div class="row_left">
+                    <p>密码<i>*</i></p>
+                    <input type="password" name="password" id='password'>
+                   
+                </div>
+                <div class="row_right">
+                    <p>确认密码<i>*</i></p>
+                    <input type="password" name="conpassword" id='conpassword'>
+                </div>
+            </div>
+            <p>至少7位，且包含1位数字</p>
+            
+        </div>
+
+        <input type="submit" value="注册" id="regBtn">
     </form>
 </main>
 

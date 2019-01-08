@@ -1,4 +1,5 @@
 $linkColor:(red, #7b7b72);
+
 .footer_container{
     width: 100%;
     height: 100%;
@@ -28,8 +29,6 @@ $linkColor:(red, #7b7b72);
         }
         li:nth-child(1){
             background-image: url('/images/contact.svg');
-            
-            //background-repeat: no-repeat;
 
         }
 

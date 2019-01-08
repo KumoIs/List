@@ -2,10 +2,12 @@ require.config({
     baseUrl:'/',
     paths:{
         'jquery':'libs/jquery/jquery-1.11.3.min',
-        'cookie':'libs/jquery/jquery-plugin/jquery.cookie',
+        'cookie':'libs/jquery/jquery-plugins/jquery.cookie',
         'header':'js/component/header',
         'main':'js/component/main',
-        'footer':'js/component/footer'
+        'footer':'js/component/footer',
+        'url':'js/component/url',
+        'template':'libs/template-web'
     },
 
     //不符合AMD规范的模块，垫片

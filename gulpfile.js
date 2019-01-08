@@ -103,5 +103,6 @@ gulp.task('img',function(){
 		.pipe(gulp.dest('dist/images'))
 		.pipe(connect.reload());
 })
+
 gulp.task('default',['css','html','js','server','watch','img',
 'static','libs']);

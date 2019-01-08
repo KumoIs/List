@@ -1,7 +1,10 @@
+
+
 define(["jquery"], ($) => {
 	class main{
 		constructor(){
 			this.init();
+			
 		}
 		init(){
 			//加载header.html
@@ -13,7 +16,7 @@ define(["jquery"], ($) => {
 				
 			})
 		
-        }
+		}
     }
 	return new main();
 })

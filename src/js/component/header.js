@@ -18,6 +18,7 @@ define(["jquery"], ($) => {
 				this.register();
 				this.fade();
 				this.scrolltop();
+				this.clicks();
 			})
 		}
 
@@ -25,6 +26,9 @@ define(["jquery"], ($) => {
 			$('.header_left_login').children().eq(3).on('click',function(){
 				 parent.location.href = '/html/register.html';
 			})
+			$('.header_left_login').children().eq(1).on('click',function(){
+				parent.location.href = '/html/login.html';
+		   })
 		}
 
 		fade(){
@@ -43,6 +47,14 @@ define(["jquery"], ($) => {
 					scrollTop:0
 				},800);
 			}
+		}
+
+		clicks(){
+			$('.header_navigation').children().each(function(i){
+				 $(this).on('click',function(){
+					 location.href = '/html/list.html';
+				 })
+			})
 		}
 		
     }

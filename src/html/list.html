@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/list.css">
+    <title>Document</title>
+</head>
+<body>
+    <header></header>
+    <main>
+        <div class="main_header_nav">
+            <span><a href='javascript:window.history.back(-1);'>  &lt;返回</a></span>
+                <span>
+                    <a href='javascript:location.href= "/index.html";' style="color:#ccc;">主页</a>
+                    /<a href='javascript:location.reload();' >首饰</a>
+                   
+                </span>
+        </div>
+
+
+        <h1>首饰</h1>
+
+
+        <div class="main_centre">
+
+            <div class="main_centre_left">
+                <div class="main_centre_left_select">首饰</div>
+                <ul>
+                    <li>按选购</li>
+                    <li>类别</li>
+                    <li>价格</li>
+                    <li>材料</li>
+                    <li>尺寸</li>
+                    <li>腕表机械装置</li>
+                    <li>颜色</li>
+                </ul>
+            </div>
+
+            <div class="main_centre_right">
+
+                <div class="main_centre_right_nav">
+                    <span>
+                        找到 <strong>0</strong> 产品
+                    </span>
+                    <span>分类条件︰</span>
+                    <span>
+                        <ul>
+                            <li>新品上市</li>
+                            <li>关联</li>
+                            <li>价格从高到低</li>
+                            <li>名字(升序)</li>
+                            <li>名字(将序)</li>
+                        </ul>
+                    </span>
+                </div>
+
+            <div class="main_centre_right_main">
+                   
+            </div>
+        </div>
+        
+    </main>
+
+
+    <footer></footer>
+    <script type="text/javascript" src="/libs/require/require.js" data-main="/js/list"></script>
+    
+    <script type="text/html" id='commodity'>
+        {{each list_item item i}}
+        <a href="/html/login.html">
+        <dl>
+            <dt>
+                <img src="{{item.img}}" alt="">
+                
+            </dt>
+            <dd>
+                <p class="title">{{item.title}}</p>
+                <p class="price">￥ {{item.price}}</p>
+                <p class="afterdiscount"></p>
+            </dd>
+        </dl>
+        </a>
+        {{/each}}
+    </script>
+</body>
+</html>
