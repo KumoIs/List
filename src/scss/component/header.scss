@@ -1,8 +1,9 @@
 $linkColor:(#000000, #7b7b72);
 header{
 	width: 100%;
-	height: 305px;
+	height: 335px;
 	font-size: 10px;
+	position: relative;
 	.header_Top_warp{
 		margin: 0 auto;
 		width: 100%;
@@ -82,7 +83,8 @@ header{
 				float:right;
 				width: 400px;
 				height: 40px;
-				
+				display: flex;
+				justify-content: space-evenly;
 				.header_centre_logo{
 					width: 22px;
 					height: 22px;
@@ -93,16 +95,17 @@ header{
 				.header_centre_text{
 					display: inline-block;
 				}
-				.header_a_left{
-					vertical-align:middle;
-					display:inline-block;
-					color: #7b7b72;
+				.header_div_left{
 					position: relative;
-					
-					span:nth-child(1){
-						background-image: url('/images/login_black-w12.svg');
-						background-repeat: no-repeat;
-						background-position: center;
+					.header_a_left{
+						vertical-align:middle;
+						display:inline-block;
+						color: #7b7b72;
+						span:nth-child(1){
+							background-image: url('/images/login_black-w12.svg');
+							background-repeat: no-repeat;
+							background-position: center;
+						}
 					}
 					.header_left_login{
 						position: absolute;
@@ -117,27 +120,60 @@ header{
 						flex-direction: column;
 						justify-content: space-around;
 						background-color: #fff;
-						z-index: 5;
+						z-index: 10;
 						display: none;
-						li{
-							margin: 10px 0;
-						}
-						li:nth-child(1){
-							margin-top: 30px;
-						} 
-						li:nth-child(2),li:nth-child(4){
-							margin: 0 auto;
-							width: 290px;
-							height: 65px;
-							display: block;
-							background-color: #000;
-							color: #fff;
-							font-size: 16px;
-							line-height: 65px;
-							&:hover{
-								background-color:rgba($color: #000000, $alpha: 0.5)
+							li{
+								margin: 10px 0;
 							}
-						}
+							li:nth-child(1){
+								margin-top: 30px;
+							} 
+							li:nth-child(2),li:nth-child(4){
+								margin: 0 auto;
+								width: 290px;
+								height: 65px;
+								display: block;
+								background-color: #000;
+								color: #fff;
+								font-size: 16px;
+								line-height: 65px;
+								cursor: pointer;
+								&:hover{
+									background-color:rgba($color: #000000, $alpha: 0.5)
+								}
+							}
+					}
+					.header_left_login_z{
+						position: absolute;
+						left: -170px;
+						width: 385px;
+						height: 295px;
+						border:1px solid #7b7b72;
+						text-align: center;
+						font-size: 20px;
+						color: #000;
+						background-color: #fff;
+						z-index: 15;
+						display: none;
+						//@extend .header_left_login;
+							li{
+								margin: 30px auto;
+							}
+							#header_quitBtn{
+								margin: 0 auto;
+								width: 290px;
+								height: 65px;
+								display: block;
+								background-color: #000;
+								color: #fff;
+								font-size: 16px;
+								line-height: 65px;
+								z-index: 99;
+								cursor: pointer;
+								&:hover{
+									background-color:rgba($color: #000000, $alpha: 0.5);
+								}
+							}
 					}
 					&:hover{
 						.header_left_login{
@@ -152,7 +188,6 @@ header{
 					vertical-align:middle;
 					display:inline-block;
 					color: #7b7b72;
-					margin: auto 72px;
 					span:nth-child(1){
 						background-image: url('/images/wishlist_parism-w13.svg');
 						background-repeat: no-repeat;
@@ -304,8 +339,9 @@ header{
 			width: 1245px;
 			height: 66px;
 			margin: 0 auto;
-			
+			position: relative;
 			padding-top: 10px;
+
 			ul{
 				width: 1000px;
 				height: 51px;
@@ -315,6 +351,10 @@ header{
 					margin: 22.5px;
 					float: left;
 					cursor: pointer;
+					&:hover{
+						color: rgba($color: #ccc, $alpha: 0.5);
+						
+					}
 				}
 				li:nth-child(10){
 					display:inline-block;
@@ -359,7 +399,19 @@ header{
 					top: 8px;
 					cursor: pointer;
 				}
-			}
+				.lenoveselect{
+					position: absolute;
+					width: 150px;
+					display: none;
+						p{
+							bottom: 1px;
+							width: 100%;
+							height: 25px;
+							border-top: 1px solid #7b7b72;
+						}
+				}
+				
+			}	
 		}
 	}
 
@@ -377,6 +429,39 @@ header{
 		cursor: pointer;
 		&:hover{
 			background-color: rgba($color: #000000, $alpha: 0.5);
+		}
+	}
+
+	.header_class_nav_warp{
+		position: absolute;
+		bottom: -300px;
+		width: 100%;
+		min-height: 300px;
+		z-index: 5;
+		overflow: hidden;
+		background-color: #fff;
+		border-top: 1px solid #7b7b72;
+		display: none;
+			.header_class_nav{
+				
+				width: 1245px;
+				margin: 0 auto;
+				color: #7b7b72;
+				margin-top: 40px;
+				h2{
+					font-weight: normal;
+					margin: 20px;
+				}
+				ul{
+					
+					li{
+						margin: 20px;
+						&:hover{
+							color: rgba($color: #ccc, $alpha: 0.5)
+					}
+			
+				}
+			}
 		}
 	}
 }

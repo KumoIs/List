@@ -1,0 +1,96 @@
+@import './component/header.scss';
+@import './component/style.scss';
+@import './component/footer.scss';
+
+main{
+    
+        overflow: hidden;;
+        zoom:1;
+
+    
+}
+.main_header_nav{
+    width: 1245px;
+    margin: 30px auto;
+   
+    span:nth-child(2){
+       margin-left: 41%;
+    }
+    a{
+        color: #ccc;
+    }
+}
+#main_centre{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+        dl{
+            width: 1245px;
+            margin: 0 auto;
+            height: 2000px;
+            dt{
+                float: left;
+                width: 607px;
+                height: 728px;
+                margin-left: 100px;
+                
+                img{
+                    width: 100%;
+                    display: block;
+                    width: 607px;
+                    height: 607px;
+                   
+                }
+                ul{
+                    width: 420px;
+                    height: 111px;
+                    margin: 0 auto;
+                    li{
+                        float: left;
+                       
+                        
+                       img{
+                        width: 80px;
+                        height: 80px;
+                        padding: 12px;
+                       }
+                    }
+                }
+            }
+
+            dd{
+                float: right;
+                width: 394px;
+                height: 734px;
+                //background-color: #077777;
+                position: relative;
+                p{
+                    font-size: 18px;
+                }
+                p:nth-child(2){
+                    font-size: 25px;
+                }
+                b{
+                    background-color: #ccc;
+                    height: 1px;
+                    width:100%;
+                    display: block;
+                    position: absolute;
+                    top: 270px;
+                }
+                #shopBtn{
+                    width: 290px; 
+                    height: 65px;
+                    background-color: #07229e;
+                    position: absolute;
+                    border-bottom: 0px;
+                    left: 0;
+                    top:330px;
+                    line-height: 65px;
+                    text-align: center;
+                    color: #ffffff;
+                    cursor: pointer;
+                }
+            }
+        }
+}

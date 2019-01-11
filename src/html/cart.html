@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/cart.css">
+    <title>购物车</title>
+</head>
+<body>
+    <header></header>
+    <main>
+    <div class="main_header_nav">
+            <span><a href='javascript:window.history.back(-1);'>  &lt;返回</a></span>
+                <span>
+                    <a href='javascript:location.href= "/index.html";' style="color:#a6adb0;">主页</a>
+                    /<a href='javascript:location.reload();' >您的购物袋</a>                   
+            </span>
+    </div>
+    <h1>您的购物袋</h1>
+    <div class="main_centre_warp">
+    <div class="main_centre">
+        <div class="main_centre_left">
+            
+        </div>
+        <div class="main_centre_right">
+            <p class="title_price">
+               <span>小计</span>
+               <span class="title_pri"></span>
+            </p>
+            <p class="row">
+                <span>免费礼品袋</span>
+                <span>否</span>
+            </p>
+             <p class="row">
+                <span>免费贺卡</span>
+                <span>否</span>
+            </p>
+             <p class="row">
+                <span>配送:</span>
+                <span>免费</span>
+            </p>
+            <b></b>
+            <p class="title_price">
+               <span>小计</span>
+               <span class="title_pri"></span>
+            </p>
+            <div id="closeBtn">结账</div>
+        </div>
+    </div>
+    </div>
+    </main>
+    <footer></footer>
+    <script type='text/javascript' src='/libs/require/require.js' data-main="/js/cart"></script>
+    <script type='text/html' id='cart_template'>
+    {{each cartitem item}}
+        <dl>
+            <dt>
+                <img src="{{item.img}}" alt="">
+            </dt>
+            <dd>
+                <p>
+                <span class='id' style="display:none;">{{item.id}}</span>
+                <span class="title">{{item.title}}</span>
+                <span class="oldprice" style="display:none;">{{item.price}}</span>
+                <span class="price">{{item.price*item.num}}</span>
+                </p>
+                <div class="main_centre_left_amend">
+                    <span class="next">-</span>
+                    <input type="text" name="cartnum" id="cartnum" value="{{item.num}}">
+                    <span class="prev">+</span>
+                </div>
+                <img src="/images/delete_black-w60.svg" alt="" class="deletBtn">
+            </dd>
+        </dl>
+    {{/each}}
+    </script>
+</body>
+</html>

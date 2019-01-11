@@ -4,9 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/datalist.css">
     <title>详情页</title>
 </head>
 <body>
+    <header></header>
+    <main>
+        <div class="main_header_nav">
+            <span><a href='javascript:window.history.back(-1);'>  &lt;返回</a></span>
+                <span>
+                    <a href='javascript:location.href= "/index.html";' style="color:#a6adb0;">主页</a>
+                    /<a href='#' >...</a>
+                    /<a href='javascript:location.reload();' >尺寸</a>                   
+                </span>
+        </div>
+
+        <div id="main_centre">
+            <script type="text/html" id='datacommodity'>
+                <dl>
+                    <dt>
+                        <img src="{{main_centre.img}}" alt="">
+                        <ul>
+                            <li><img src="{{main_centre.img}}" alt=""></li>
+                            <li><img src="{{main_centre.img}}" alt=""></li>
+                            <li><img src="{{main_centre.img}}" alt=""></li>
+                            <li><img src="{{main_centre.img}}" alt=""></li>
+                        </ul>
+                    </dt>
+                    <dd>
+                        <p class="title">{{main_centre.title}}</p>
+                        <p class="price">￥ {{main_centre.price}}</p>
+                        {{if !main_centre.price}}
+                        <p class="afterdiscount">−30%  |  旧价格 ¥ {{main_centre.price}}</p>
+                        {{/if}}
+                        <b></b>
+                        <div id='shopBtn'>添加购物车</div>
+                    </dd>
+                </dl>
+            </script>
+        </div>
+    </main> 
+    <footer></footer>
+    <script type="text/javascript" src="/libs/require/require.js" data-main="/js/datalist"></script>
     
 </body>
-</html>
+</html>s

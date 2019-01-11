@@ -2,6 +2,14 @@
 @import './component/style.scss';
 @import './component/footer.scss';
 
+
+main{
+    
+    overflow: hidden;;
+    zoom:1;
+
+
+}
 .main_header_nav{
     width: 1245px;
     margin: 30px auto;
@@ -57,7 +65,7 @@ h1{
                 margin: 10px;
                 dl{
                 width: 284px;
-                height: 315px;
+                height: 275px;
                     dt{
                         margin:10px auto;
                         width: 198px;

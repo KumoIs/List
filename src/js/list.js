@@ -3,24 +3,18 @@ require(["require-config"],()=>{
         class list{
             constructor(){
                 this.init();
-                this.clicks();
+                console.log(url);
             }
             init(){
                 
 
                // console.log($.getJOSN("http://rap2api.taobao.org/app/mock/data/732889"))
-                $.get(url.baseUrlRap,(data)=>{
+                $.get(url.baseUrlRap+'/list',(data)=>{
                     const html = template("commodity",{list_item:data.res_body.data});
                     $('.main_centre_right_main').html(html);
+                    console.log(html);
                 })
             }
-
-            clicks(){
-                $('.main_centre_right_main dl').each(function(i){
-                    console.log(i);
-                })
-            }
-           
         }
     
             
