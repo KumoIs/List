@@ -1,10 +1,11 @@
 require(['./require-config'],function(){
-    require(['jquery','url','template','cookie','header','footer'],function($,url,template){
+    require(['jquery','url','template','zoom','cookie','header','footer'],function($,url,template){
         class datalist{
             constructor(){
                 this.init();
                 //配置cookie自动在JS值与JSON值之间转换
-			    //$.cookie.json = true;
+                //$.cookie.json = true;
+                
             }
             init(){
                      
@@ -22,11 +23,19 @@ require(['./require-config'],function(){
                             const html = template("datacommodity",{main_centre:res.res_body});
                             $('#main_centre').html(html);
                             this.shop(res.res_body,arrSearch[1]);
+                            this.addEventListener();
                         }
                     }
                 })
             }
-
+            addEventListener(){
+                        $('#zoom').elevateZoom({
+                            zoomType : "lens",
+                            gallery:'small', 
+                            lensSize : 150,
+                            //lensShape : "round",
+                        });          
+            }
 
             shop(res,id){
                 const obj = {
@@ -55,6 +64,7 @@ require(['./require-config'],function(){
                     console.log($.cookie('cart'));
                 })
             }
+
         }      
         new datalist();
     })

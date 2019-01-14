@@ -18,6 +18,7 @@ define(["jquery",'template','url',"cookie"], ($,template,url) => {
 				console.log('头部加载成功');
 				this.register().cookietrue();
 				this.quit();
+				this.lenovebtns();
 				new scrollt();
 
 			})
@@ -77,10 +78,12 @@ define(["jquery",'template','url',"cookie"], ($,template,url) => {
 				$('.header_class_nav_warp').css({'display':'none'});
 				
 			})
-			$('.lenovoinput').on('input',$.proxy(this.suggest,this))
-			$('.lenovoinput').on('blur',function(){
-				$('.lenoveselect').css({'display':'none'});
-			})
+
+			$('.lenovoinput').on('input',this.suggest);
+
+			var res = JSON.parse($.cookie('cart'));
+			$('.header_a_Rnum').html(res.length);
+
 			return this;
 		}
 
@@ -128,13 +131,19 @@ define(["jquery",'template','url',"cookie"], ($,template,url) => {
 				$(".lenoveselect").show().html(html);
 			})
 
-			this.lenovebtns();
+			
 		}
 		
+		//联想输入框
 		lenovebtns(){
-			var children = $('.lenoveselect').children();
-			$('.lenoveselect').on('click',children,function(){
-				console.log('123');
+			$('body').on('click',function(event){
+				let src = event.target || event.srcElement
+				if(src.className == 'p_lenove'){					
+					$('.lenoveselect').css({'display':'none'});
+					$('.lenovoinput').val(src.innerHTML);
+				}else{
+					$('.lenoveselect').css({'display':'none'});
+				}
 			})
 		}
 		

@@ -23,13 +23,22 @@
             <script type="text/html" id='datacommodity'>
                 <dl>
                     <dt>
-                        <img src="{{main_centre.img}}" alt="">
-                        <ul>
-                            <li><img src="{{main_centre.img}}" alt=""></li>
-                            <li><img src="{{main_centre.img}}" alt=""></li>
-                            <li><img src="{{main_centre.img}}" alt=""></li>
-                            <li><img src="{{main_centre.img}}" alt=""></li>
-                        </ul>
+                        <img id="zoom" src="{{main_centre.img}}" data-zoom-image="{{main_centre.img}}"/>
+                        <div id="small">
+                            <a href="#" data-image = "{{main_centre.img}}" data-zoom-image="{{main_centre.img}}">
+                                <img src="{{main_centre.img}}" alt="">
+                            </a>
+                            <a href="#" data-image = "{{main_centre.img_col1}}" data-zoom-image="{{main_centre.img_col1}}">
+                                <img src="{{main_centre.img_col1}}" alt="">
+                            </a>
+                            <a href="#" data-image = "{{main_centre.img_col2}}" data-zoom-image="{{main_centre.img_col2}}">
+                                <img src="{{main_centre.img_col2}}" alt="">
+                            </a>
+                            <a href="#" data-image = "{{main_centre.img_col3}}" data-zoom-image="{{main_centre.img_col3}}">
+                                <img src="{{main_centre.img_col3}}" alt="">
+                            </a>                                          
+                        </div>
+
                     </dt>
                     <dd>
                         <p class="title">{{main_centre.title}}</p>
